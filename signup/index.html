@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Get started | FirstRing TX</title>
+<meta name="description" content="Tell FirstRing TX about your shop and we'll call you back. Call or text (817) 719-6804 or email hello@firstringtx.com.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="/site.css">
+<script>
+try {
+  var savedTheme = localStorage.getItem('firstring-theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.setAttribute('data-theme', savedTheme);
+} catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="/"><span class="mark" aria-hidden="true"></span>FirstRing <small>TX</small></a>
+    <nav aria-label="Main">
+      <a href="/#services" data-i18n="navWhat">What we do</a>
+      <a href="/#how" data-i18n="navHow">How it works</a>
+      <a href="/#calc" data-i18n="navCalc">Calculator</a>
+      <a href="/#pricing" data-i18n="navPrice">Pricing</a>
+      <a href="/#faq" data-i18n="navFaq">Questions</a>
+      <a href="/signup" aria-current="page" data-i18n="navStart">Get started</a>
+    </nav>
+    <div class="bar-actions">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="lang-en" aria-pressed="true">EN</button>
+        <button type="button" id="lang-es" aria-pressed="false">ES</button>
+      </div>
+      <button type="button" class="theme-btn" id="theme-toggle" aria-pressed="false"><span class="sr" data-i18n="themeSr">Theme:</span><span class="when-light" data-i18n="themeDark">Dark</span><span class="when-dark" data-i18n="themeLight">Light</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="content" tabindex="-1">
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">FirstRing TX · Fort Worth</p>
+      <h1 data-i18n="h1">Get started</h1>
+      <p class="lede" data-i18n="lede">Tell us about your shop, what you need, and what's getting in the way. We'll call you back. You can also call or text (817) 719-6804 or email hello@firstringtx.com.</p>
+      <p class="plan-note" id="plan-note" hidden></p>
+    </div>
+
+    <noscript>
+      <p class="banner">This form needs JavaScript. Call or text <a href="tel:+18177196804">(817) 719-6804</a> or email <a href="mailto:hello@firstringtx.com">hello@firstringtx.com</a>.</p>
+    </noscript>
+
+    <div id="success" class="success-box" hidden tabindex="-1">
+      <h2 data-i18n="successH">We'll call you back.</h2>
+      <p id="success-detail"></p>
+    </div>
+
+    <form id="signup" novalidate>
+      <div id="form-error" class="banner" hidden role="alert" tabindex="-1"></div>
+      <p id="form-status" class="sr" aria-live="polite"></p>
+
+      <fieldset>
+        <legend data-i18n="legendShop">Your shop</legend>
+        <div class="grid two">
+          <div class="field">
+            <label for="business_name"><span data-i18n="labBusiness">Business name</span> <span class="req" aria-hidden="true">*</span></label>
+            <input id="business_name" name="business_name" type="text" autocomplete="organization" required aria-required="true" maxlength="200" aria-describedby="err-business_name">
+            <p class="err" id="err-business_name" hidden></p>
+          </div>
+          <div class="field">
+            <label for="contact_name"><span data-i18n="labContact">Your name</span> <span class="req" aria-hidden="true">*</span></label>
+            <input id="contact_name" name="contact_name" type="text" autocomplete="name" required aria-required="true" maxlength="200" aria-describedby="err-contact_name">
+            <p class="err" id="err-contact_name" hidden></p>
+          </div>
+          <div class="field">
+            <label for="phone"><span data-i18n="labPhone">Phone</span> <span class="req" aria-hidden="true">*</span></label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-required="true" maxlength="40" aria-describedby="err-phone">
+            <p class="err" id="err-phone" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email"><span data-i18n="labEmail">Email</span> <span class="req" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-required="true" maxlength="200" aria-describedby="err-email">
+            <p class="err" id="err-email" hidden></p>
+          </div>
+          <div class="field">
+            <label for="trade" data-i18n="labTrade">Trade</label>
+            <select id="trade" name="trade">
+              <option value="" data-i18n="optSelect">Select</option>
+              <option value="HVAC">HVAC</option>
+              <option value="Plumbing" data-i18n="optPlumbing">Plumbing</option>
+              <option value="Roofing" data-i18n="optRoofing">Roofing</option>
+              <option value="Electrical" data-i18n="optElectrical">Electrical</option>
+              <option value="Cleaning" data-i18n="optCleaning">Cleaning</option>
+              <option value="Other" data-i18n="optOther">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="service_area" data-i18n="labArea">Service area</label>
+            <input id="service_area" name="service_area" type="text" maxlength="120" data-ph-en="Cities you cover" data-ph-es="Ciudades que cubre" placeholder="Cities you cover">
+          </div>
+          <div class="field">
+            <label for="team_size" data-i18n="labTeam">Team size</label>
+            <select id="team_size" name="team_size">
+              <option value="" data-i18n="optSelect">Select</option>
+              <option value="Just me" data-i18n="optTeam1">Just me</option>
+              <option value="2-5" data-i18n="optTeam2">2–5</option>
+              <option value="6-10" data-i18n="optTeam6">6–10</option>
+              <option value="11 or more" data-i18n="optTeam11">11 or more</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="monthly_calls" data-i18n="labCalls">Calls in a month</label>
+            <select id="monthly_calls" name="monthly_calls">
+              <option value="" data-i18n="optSelect">Select</option>
+              <option value="Under 20" data-i18n="optCalls1">Under 20</option>
+              <option value="20-50" data-i18n="optCalls2">20–50</option>
+              <option value="51-100" data-i18n="optCalls3">51–100</option>
+              <option value="More than 100" data-i18n="optCalls4">More than 100</option>
+            </select>
+          </div>
+          <div class="field span-2">
+            <label for="how_calls_answered_now" data-i18n="labHow">How calls are answered now</label>
+            <select id="how_calls_answered_now" name="how_calls_answered_now">
+              <option value="" data-i18n="optSelect">Select</option>
+              <option value="I answer when I can" data-i18n="optHow1">I answer when I can</option>
+              <option value="Voicemail" data-i18n="optHow2">Voicemail</option>
+              <option value="Someone in the office" data-i18n="optHow3">Someone in the office</option>
+              <option value="Answering service" data-i18n="optHow4">Answering service</option>
+              <option value="Most calls go unanswered" data-i18n="optHow5">Most calls go unanswered</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend data-i18n="legendNeed">What you need</legend>
+        <div class="grid">
+          <div class="field">
+            <label for="needs" data-i18n="labNeeds">What do you want help with?</label>
+            <textarea id="needs" name="needs" maxlength="4000" data-ph-en="Missed calls, booking, reviews, Spanish calls…" data-ph-es="Llamadas perdidas, citas, reseñas, llamadas en español…" placeholder="Missed calls, booking, reviews, Spanish calls…"></textarea>
+          </div>
+          <div class="field">
+            <label for="challenges" data-i18n="labChallenges">What problems are getting in the way?</label>
+            <textarea id="challenges" name="challenges" maxlength="4000" data-ph-en="On a job when the phone rings, no one at the desk…" data-ph-es="En un trabajo cuando suena el teléfono, nadie en la oficina…" placeholder="On a job when the phone rings, no one at the desk…"></textarea>
+          </div>
+          <div class="grid two">
+            <div class="field">
+              <label for="plan_interest" data-i18n="labPlan">Plan you want to talk about</label>
+              <select id="plan_interest" name="plan_interest">
+                <option value="Starter">Starter</option>
+                <option value="Growth">Growth</option>
+                <option value="Pro">Pro</option>
+                <option value="Not sure" data-i18n="optPlanUnsure">Not sure</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="best_time_to_call" data-i18n="labTime">Best time to call</label>
+              <select id="best_time_to_call" name="best_time_to_call">
+                <option value="" data-i18n="optSelect">Select</option>
+                <option value="Morning" data-i18n="optTime1">Morning</option>
+                <option value="Afternoon" data-i18n="optTime2">Afternoon</option>
+                <option value="Evening" data-i18n="optTime3">Evening</option>
+                <option value="Weekdays" data-i18n="optTime4">Weekdays</option>
+                <option value="Anytime" data-i18n="optTime5">Anytime</option>
+              </select>
+            </div>
+          </div>
+          <div class="consent">
+            <input id="sms_consent" name="sms_consent" type="checkbox" value="yes">
+            <label id="sms-label" for="sms_consent"></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="hp" aria-hidden="true">
+        <label for="company-url">Leave blank</label>
+        <input id="company-url" name="company_url_leave_blank" type="text" tabindex="-1" autocomplete="off" autocapitalize="off" spellcheck="false" value="">
+      </div>
+      <input type="hidden" id="language" name="language" value="en">
+
+      <div class="actions">
+        <button type="submit" class="btn primary" id="submit" data-i18n="submit">Get started</button>
+        <p class="hint" id="required-hint" data-i18n="requiredHint">* Required</p>
+      </div>
+    </form>
+
+    <aside class="fallback">
+      <p data-i18n="fallback">Prefer to talk now? Call or text Anthony, your local FirstRing rep.</p>
+      <a href="tel:+18177196804">Call or text (817) 719-6804</a>
+      <a href="mailto:hello@firstringtx.com">hello@firstringtx.com</a>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 FirstRing · AI Automation for Home-Service Businesses · Texas</span>
+    <span><a href="/privacy" data-i18n="privacy">Privacy</a> · <a href="/terms" data-i18n="terms">Terms</a></span>
+    <span>Fort Worth · <a href="tel:+18177196804">(817) 719-6804</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ES = {
+    navWhat: "Qué hacemos",
+    navHow: "Cómo funciona",
+    navCalc: "Calculadora",
+    navPrice: "Precios",
+    navFaq: "Preguntas",
+    navStart: "Empezar",
+    themeSr: "Tema:",
+    themeDark: "Oscuro",
+    themeLight: "Claro",
+    h1: "Empezar",
+    lede: "Cuéntenos de su negocio, qué necesita y qué se le complica. Le llamamos de vuelta. También puede llamar o enviar un texto al (817) 719-6804 o escribir a hello@firstringtx.com.",
+    legendShop: "Su negocio",
+    legendNeed: "Qué necesita",
+    labBusiness: "Nombre del negocio",
+    labContact: "Su nombre",
+    labPhone: "Teléfono",
+    labEmail: "Correo electrónico",
+    labTrade: "Oficio",
+    labArea: "Zona de servicio",
+    labTeam: "Tamaño del equipo",
+    labCalls: "Llamadas en un mes",
+    labHow: "Cómo contesta las llamadas ahora",
+    labNeeds: "¿En qué quiere ayuda?",
+    labChallenges: "¿Qué problemas se le atraviesan?",
+    labPlan: "Plan del que quiere hablar",
+    labTime: "Mejor hora para llamar",
+    optSelect: "Seleccione",
+    optPlumbing: "Plomería",
+    optRoofing: "Techos",
+    optElectrical: "Electricidad",
+    optCleaning: "Limpieza",
+    optOther: "Otro",
+    optTeam1: "Solo yo",
+    optTeam2: "2–5",
+    optTeam6: "6–10",
+    optTeam11: "11 o más",
+    optCalls1: "Menos de 20",
+    optCalls2: "20–50",
+    optCalls3: "51–100",
+    optCalls4: "Más de 100",
+    optHow1: "Contesto cuando puedo",
+    optHow2: "Buzón de voz",
+    optHow3: "Alguien en la oficina",
+    optHow4: "Servicio de contestación",
+    optHow5: "La mayoría no se contesta",
+    optPlanUnsure: "No estoy seguro",
+    optTime1: "Mañana",
+    optTime2: "Tarde",
+    optTime3: "Noche",
+    optTime4: "Entre semana",
+    optTime5: "Cualquier hora",
+    submit: "Empezar",
+    requiredHint: "* Obligatorio",
+    fallback: "¿Prefiere hablar ahora? Llame o envíe un texto a Anthony, su representante local de FirstRing.",
+    privacy: "Privacidad",
+    terms: "Términos",
+    successH: "Le llamamos de vuelta.",
+    pageTitle: "Empezar | FirstRing TX",
+    errBusiness: "Escriba el nombre del negocio.",
+    errContact: "Escriba su nombre.",
+    errPhone: "Escriba un teléfono con al menos 10 dígitos.",
+    errEmail: "Escriba un correo válido, como nombre@correo.com.",
+    errLong: "Acorte este texto.",
+    sending: "Enviando… Puede tardar hasta un minuto.",
+    planNote: "Eligió el plan {plan}. Puede cambiarlo abajo.",
+    successDetail: "Tenemos los datos de {business}. También puede llamar o enviar un texto al (817) 719-6804 o escribir a hello@firstringtx.com."
+  };
+  var EN = {
+    navWhat: "What we do",
+    navHow: "How it works",
+    navCalc: "Calculator",
+    navPrice: "Pricing",
+    navFaq: "Questions",
+    navStart: "Get started",
+    themeSr: "Theme:",
+    themeDark: "Dark",
+    themeLight: "Light",
+    h1: "Get started",
+    lede: "Tell us about your shop, what you need, and what's getting in the way. We'll call you back. You can also call or text (817) 719-6804 or email hello@firstringtx.com.",
+    legendShop: "Your shop",
+    legendNeed: "What you need",
+    labBusiness: "Business name",
+    labContact: "Your name",
+    labPhone: "Phone",
+    labEmail: "Email",
+    labTrade: "Trade",
+    labArea: "Service area",
+    labTeam: "Team size",
+    labCalls: "Calls in a month",
+    labHow: "How calls are answered now",
+    labNeeds: "What do you want help with?",
+    labChallenges: "What problems are getting in the way?",
+    labPlan: "Plan you want to talk about",
+    labTime: "Best time to call",
+    optSelect: "Select",
+    optPlumbing: "Plumbing",
+    optRoofing: "Roofing",
+    optElectrical: "Electrical",
+    optCleaning: "Cleaning",
+    optOther: "Other",
+    optTeam1: "Just me",
+    optTeam2: "2–5",
+    optTeam6: "6–10",
+    optTeam11: "11 or more",
+    optCalls1: "Under 20",
+    optCalls2: "20–50",
+    optCalls3: "51–100",
+    optCalls4: "More than 100",
+    optHow1: "I answer when I can",
+    optHow2: "Voicemail",
+    optHow3: "Someone in the office",
+    optHow4: "Answering service",
+    optHow5: "Most calls go unanswered",
+    optPlanUnsure: "Not sure",
+    optTime1: "Morning",
+    optTime2: "Afternoon",
+    optTime3: "Evening",
+    optTime4: "Weekdays",
+    optTime5: "Anytime",
+    submit: "Get started",
+    requiredHint: "* Required",
+    fallback: "Prefer to talk now? Call or text Anthony, your local FirstRing rep.",
+    privacy: "Privacy",
+    terms: "Terms",
+    successH: "We'll call you back.",
+    pageTitle: "Get started | FirstRing TX",
+    errBusiness: "Enter the business name.",
+    errContact: "Enter your name.",
+    errPhone: "Enter a phone number with at least 10 digits.",
+    errEmail: "Enter an email address like name@email.com.",
+    errLong: "Shorten this text.",
+    sending: "Sending… This can take up to a minute.",
+    planNote: "You chose the {plan} plan. You can change it below.",
+    successDetail: "We have the details for {business}. You can also call or text (817) 719-6804 or email hello@firstringtx.com."
+  };
+
+  var lang = "en";
+  var submitting = false;
+  var savedBusiness = "";
+  var preselected = "";
+  var form = document.getElementById("signup");
+  var submitBtn = document.getElementById("submit");
+  var statusEl = document.getElementById("form-status");
+  var errorEl = document.getElementById("form-error");
+  var successEl = document.getElementById("success");
+  var TIMEOUT_MS = window.FIRSTRING_SIGNUP_TIMEOUT || 70000;
+  var PLANS = {Starter:1, Growth:1, Pro:1, "Not sure":1};
+  var TRADES = {HVAC:1, Plumbing:1, Roofing:1, Electrical:1, Cleaning:1, Other:1};
+
+  function t(key){ return (lang === "es" ? ES : EN)[key] || EN[key] || ""; }
+
+  function addText(parent, text){ parent.appendChild(document.createTextNode(text)); }
+  function addLink(parent, href, text){
+    var a = document.createElement("a");
+    a.href = href;
+    a.textContent = text;
+    parent.appendChild(a);
+  }
+
+  function renderConsent(){
+    var label = document.getElementById("sms-label");
+    while (label.firstChild) label.removeChild(label.firstChild);
+    var q = "?lang=" + lang;
+    if (lang === "es") {
+      addText(label, "Acepto que FirstRing TX me llame y me envíe mensajes de texto a este número sobre mi solicitud y sobre FirstRing. La frecuencia de los mensajes varía. Pueden aplicar tarifas de mensajes y datos. Responda STOP para cancelar y HELP para ayuda. El consentimiento no es condición de compra. ");
+      addLink(label, "/privacy" + q, "Política de privacidad");
+      addText(label, " y ");
+      addLink(label, "/terms" + q, "Términos");
+      addText(label, ".");
+    } else {
+      addText(label, "I agree that FirstRing TX may call and text me at this number about my request and about FirstRing. Message frequency varies. Message and data rates may apply. Reply STOP to opt out and HELP for help. Consent is not a condition of purchase. ");
+      addLink(label, "/privacy" + q, "Privacy Policy");
+      addText(label, " and ");
+      addLink(label, "/terms" + q, "Terms");
+      addText(label, ".");
+    }
+  }
+
+  function renderBanner(){
+    if (errorEl.hidden) return;
+    while (errorEl.firstChild) errorEl.removeChild(errorEl.firstChild);
+    if (lang === "es") {
+      addText(errorEl, "No se pudo enviar en este momento. Llame o envíe un texto al ");
+      addLink(errorEl, "tel:+18177196804", "(817) 719-6804");
+      addText(errorEl, " o escriba a ");
+      addLink(errorEl, "mailto:hello@firstringtx.com", "hello@firstringtx.com");
+      addText(errorEl, " y le llamamos de vuelta.");
+    } else {
+      addText(errorEl, "We couldn't send that just now. Call or text ");
+      addLink(errorEl, "tel:+18177196804", "(817) 719-6804");
+      addText(errorEl, " or email ");
+      addLink(errorEl, "mailto:hello@firstringtx.com", "hello@firstringtx.com");
+      addText(errorEl, " and we'll call you back.");
+    }
+  }
+
+  function renderPlanNote(){
+    var note = document.getElementById("plan-note");
+    if (!preselected) { note.hidden = true; note.textContent = ""; return; }
+    note.hidden = false;
+    note.textContent = t("planNote").replace("{plan}", preselected);
+  }
+
+  function renderSuccessDetail(){
+    if (successEl.hidden) return;
+    document.getElementById("success-detail").textContent = t("successDetail").replace("{business}", savedBusiness);
+  }
+
+  function applyLang(next){
+    lang = next === "es" ? "es" : "en";
+    document.documentElement.lang = lang;
+    document.getElementById("language").value = lang;
+    document.title = t("pageTitle");
+    document.getElementById("lang-en").setAttribute("aria-pressed", lang === "en" ? "true" : "false");
+    document.getElementById("lang-es").setAttribute("aria-pressed", lang === "es" ? "true" : "false");
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      if (el.id === "submit" && el.disabled) return;
+      var key = el.getAttribute("data-i18n");
+      if (t(key)) el.textContent = t(key);
+    });
+    var langGroup = document.querySelector(".lang");
+    if (langGroup) langGroup.setAttribute("aria-label", lang === "es" ? "Idioma" : "Language");
+    document.querySelectorAll("[data-ph-en]").forEach(function(el){
+      el.placeholder = lang === "es" ? el.getAttribute("data-ph-es") : el.getAttribute("data-ph-en");
+    });
+    ["business_name","contact_name","phone","email"].forEach(function(id){
+      var err = document.getElementById("err-" + id);
+      if (err && !err.hidden) setFieldError(id, fieldError(id));
+    });
+    renderConsent();
+    renderPlanNote();
+    renderBanner();
+    renderSuccessDetail();
+    if (!submitBtn.disabled) submitBtn.textContent = t("submit");
+    try { localStorage.setItem("firstring-lang", lang); } catch (e) {}
+    document.querySelectorAll('a[href="/privacy"], a[href^="/privacy?"], a[href="/terms"], a[href^="/terms?"]').forEach(function(a){
+      if (a.closest("#sms-label") || a.closest("#form-error")) return;
+      var path = a.pathname || a.getAttribute("href").split("?")[0];
+      a.href = path + "?lang=" + lang;
+    });
+  }
+
+  function digits(s){ return String(s || "").replace(/\D/g, ""); }
+  function fieldError(id){
+    var el = document.getElementById(id);
+    var v = (el.value || "").trim();
+    if (id === "business_name") return v ? (v.length > 200 ? t("errLong") : "") : t("errBusiness");
+    if (id === "contact_name") return v ? (v.length > 200 ? t("errLong") : "") : t("errContact");
+    if (id === "phone") {
+      var n = digits(v);
+      return (n.length >= 10 && n.length <= 15) ? "" : t("errPhone");
+    }
+    if (id === "email") return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "" : t("errEmail");
+    return "";
+  }
+  function setFieldError(id, msg){
+    var el = document.getElementById(id);
+    var err = document.getElementById("err-" + id);
+    if (!err) return !msg;
+    if (msg) {
+      err.hidden = false;
+      err.textContent = msg;
+      el.setAttribute("aria-invalid", "true");
+      return false;
+    }
+    err.hidden = true;
+    err.textContent = "";
+    el.removeAttribute("aria-invalid");
+    return true;
+  }
+  function validateField(id){ return setFieldError(id, fieldError(id)); }
+  function validateAll(){
+    var ids = ["business_name","contact_name","phone","email"];
+    var ok = true;
+    var first = null;
+    ids.forEach(function(id){
+      if (!validateField(id)) {
+        ok = false;
+        if (!first) first = document.getElementById(id);
+      }
+    });
+    if (first) first.focus();
+    return ok;
+  }
+
+  ["business_name","contact_name","phone","email"].forEach(function(id){
+    var el = document.getElementById(id);
+    el.addEventListener("blur", function(){ validateField(id); });
+    el.addEventListener("input", function(){
+      if (el.getAttribute("aria-invalid") === "true") validateField(id);
+    });
+  });
+
+  function payload(){
+    function val(id){ return (document.getElementById(id).value || "").trim(); }
+    var trade = val("trade");
+    var plan = val("plan_interest");
+    return {
+      business_name: val("business_name"),
+      contact_name: val("contact_name"),
+      phone: val("phone"),
+      email: val("email"),
+      trade: TRADES[trade] ? trade : "",
+      service_area: val("service_area"),
+      team_size: val("team_size"),
+      monthly_calls: val("monthly_calls"),
+      how_calls_answered_now: val("how_calls_answered_now"),
+      needs: val("needs"),
+      challenges: val("challenges"),
+      plan_interest: PLANS[plan] ? plan : "Not sure",
+      best_time_to_call: val("best_time_to_call"),
+      language: lang === "es" ? "es" : "en",
+      sms_consent: document.getElementById("sms_consent").checked === true,
+      website: (document.getElementById("company-url").value || "").trim()
+    };
+  }
+
+  function showError(){
+    errorEl.hidden = false;
+    renderBanner();
+    statusEl.textContent = errorEl.textContent;
+    errorEl.focus && errorEl.setAttribute("tabindex", "-1");
+    errorEl.focus();
+  }
+
+  function showSuccess(business){
+    savedBusiness = business;
+    form.hidden = true;
+    errorEl.hidden = true;
+    successEl.hidden = false;
+    renderSuccessDetail();
+    statusEl.textContent = t("successH") + " " + document.getElementById("success-detail").textContent;
+    successEl.focus();
+  }
+
+  form.addEventListener("submit", function(ev){
+    ev.preventDefault();
+    if (submitting) return;
+    if (!validateAll()) return;
+    var body = payload();
+    submitting = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = t("sending");
+    form.setAttribute("aria-busy", "true");
+    errorEl.hidden = true;
+    statusEl.textContent = t("sending");
+
+    var ctrl = new AbortController();
+    var timer = setTimeout(function(){ ctrl.abort(); }, TIMEOUT_MS);
+    fetch("https://jarvis-hvac.onrender.com/api/firstring/signup", {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "Accept": "application/json"},
+      body: JSON.stringify(body),
+      signal: ctrl.signal
+    }).then(function(res){
+      return res.json().catch(function(){ return {}; }).then(function(data){
+        return {status: res.status, data: data};
+      });
+    }).then(function(result){
+      if (result.status === 200 && result.data && result.data.ok === true) showSuccess(body.business_name);
+      else showError();
+    }).catch(function(){
+      showError();
+    }).then(function(){
+      clearTimeout(timer);
+      submitting = false;
+      form.removeAttribute("aria-busy");
+      if (!successEl.hidden) return;
+      submitBtn.disabled = false;
+      submitBtn.textContent = t("submit");
+    });
+  });
+
+  document.getElementById("lang-en").addEventListener("click", function(){ applyLang("en"); });
+  document.getElementById("lang-es").addEventListener("click", function(){ applyLang("es"); });
+
+  var root = document.documentElement;
+  var themeBtn = document.getElementById("theme-toggle");
+  function isDark(){
+    var set = root.getAttribute("data-theme");
+    if (set === "dark") return true;
+    if (set === "light") return false;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  function syncTheme(){ themeBtn.setAttribute("aria-pressed", isDark() ? "true" : "false"); }
+  themeBtn.addEventListener("click", function(){
+    var next = isDark() ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("firstring-theme", next); } catch (e) {}
+    syncTheme();
+  });
+  syncTheme();
+
+  var params = new URLSearchParams(location.search);
+  var planParam = params.get("plan") || "";
+  var planMatch = "";
+  Object.keys(PLANS).forEach(function(name){
+    if (name.toLowerCase() === planParam.toLowerCase()) planMatch = name;
+  });
+  if (planMatch) {
+    document.getElementById("plan_interest").value = planMatch;
+    if (planMatch !== "Not sure") preselected = planMatch;
+  } else {
+    document.getElementById("plan_interest").value = "Not sure";
+  }
+  var startLang = params.get("lang");
+  if (startLang !== "en" && startLang !== "es") {
+    try { startLang = localStorage.getItem("firstring-lang"); } catch (e) { startLang = "en"; }
+  }
+  applyLang(startLang === "es" ? "es" : "en");
+  renderConsent();
+})();
+</script>
+</body>
+</html>

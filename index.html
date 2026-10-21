@@ -196,6 +196,9 @@ details p{margin:0 0 14px;color:var(--muted);max-width:65ch}
 .panel a.val{text-decoration:underline;text-underline-offset:3px}
 .copy{border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:6px;font:700 .78rem var(--body);min-height:44px;padding:8px 12px;cursor:pointer}
 .panel .where{color:var(--muted);font-size:.95rem}
+.panel .btn{width:100%}
+.contact .copy-block a,.also a{text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.also a{color:var(--cobalt)}
 
 footer{padding-block:28px;color:var(--muted);font-size:.88rem}
 footer .wrap{display:flex;justify-content:space-between;gap:12px 20px;flex-wrap:wrap}
@@ -245,10 +248,11 @@ section{scroll-margin-top:16px}
       <a href="#calc">Calculator</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">Questions</a>
+      <a href="/signup">Get started</a>
     </nav>
     <div class="bar-actions">
       <button type="button" class="theme-btn" id="theme-toggle" aria-pressed="false"><span class="sr">Theme:</span><span class="when-light">Dark</span><span class="when-dark">Light</span></button>
-      <a class="btn primary" href="#contact">Book a Free Demo</a>
+      <a class="btn primary" href="/signup">Book a Free Demo</a>
     </div>
   </div>
 </header>
@@ -261,7 +265,7 @@ section{scroll-margin-top:16px}
         <h1 style="margin-top:14px">Every missed call is a job going to your <span class="hl">competitor.</span></h1>
         <p class="lede">FirstRing answers every lead instantly — texting back missed calls, booking jobs 24/7 and getting you 5-star reviews on autopilot. Set up in days. No contracts.</p>
         <div class="ctas">
-          <a class="btn primary" href="#contact">Get a Free Demo</a>
+          <a class="btn primary" href="/signup">Get a Free Demo</a>
           <a class="btn" href="#pricing">See Pricing</a>
           <a class="btn" href="tel:+18177196804">Call or text (817) 719-6804</a>
         </div>
@@ -396,7 +400,7 @@ section{scroll-margin-top:16px}
             <li>Mobile app</li>
             <li>Email support</li>
           </ul>
-          <a class="btn" href="#contact">Get Started</a>
+          <a class="btn" href="/signup?plan=Starter">Get Started<span class="sr"> with Starter</span></a>
         </article>
         <article class="plan pop">
           <span class="tag">MOST POPULAR</span>
@@ -409,7 +413,7 @@ section{scroll-margin-top:16px}
             <li>Automatic Google review requests</li>
             <li>Monthly results report</li>
           </ul>
-          <a class="btn primary" href="#contact">Get Started</a>
+          <a class="btn primary" href="/signup?plan=Growth">Get Started<span class="sr"> with Growth</span></a>
         </article>
         <article class="plan">
           <h3>Pro</h3>
@@ -421,7 +425,7 @@ section{scroll-margin-top:16px}
             <li>Past-customer reactivation texts</li>
             <li>Priority support</li>
           </ul>
-          <a class="btn" href="#contact">Get Started</a>
+          <a class="btn" href="/signup?plan=Pro">Get Started<span class="sr"> with Pro</span></a>
         </article>
       </div>
       <p class="plans-note">Every plan is month-to-month. Cancel anytime. If you don't see results in your first 30 days, we refund your first month.</p>
@@ -433,7 +437,7 @@ section{scroll-margin-top:16px}
           <li>Social media posting</li>
           <li>Live results dashboard</li>
         </ul>
-        <p>These four are not priced here and are not part of the Starter, Growth, or Pro lists. Ask about them on the demo. Win-back texts to past customers are the Pro plan's past-customer reactivation texts.</p>
+        <p>These four are not priced here and are not part of the Starter, Growth, or Pro lists. Ask about them on the <a href="/signup">demo</a>. Win-back texts to past customers are the Pro plan's past-customer reactivation texts.</p>
       </aside>
     </div>
   </section>
@@ -503,9 +507,11 @@ section{scroll-margin-top:16px}
         <p>Book a free 15-minute demo. Serving Fort Worth, Dallas and all of Texas.</p>
         <p>We'll show you the text-back working on your own business name, and figure out how many calls you're missing.</p>
         <p>Serving Fort Worth, Arlington, and the DFW area.</p>
+        <p><a href="/signup">Get started</a> and we'll call you back.</p>
       </div>
       <div class="panel">
         <p class="eyebrow">Call or text Anthony, your local FirstRing rep</p>
+        <a class="btn primary" href="/signup">Get started</a>
         <div class="row">
           <a class="val" id="phone" href="tel:+18177196804">Call or text (817) 719-6804</a>
           <button type="button" class="copy" data-copy="phone" data-copy-value="(817) 719-6804" aria-label="Copy phone number">Copy</button>
@@ -528,6 +534,7 @@ section{scroll-margin-top:16px}
   <div class="wrap">
     <span>© 2026 FirstRing · AI Automation for Home-Service Businesses · Texas</span>
     <span>Fort Worth · <a href="tel:+18177196804">(817) 719-6804</a></span>
+    <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
     <span>First ring. First job.</span>
   </div>
 </footer>
